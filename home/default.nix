@@ -1,3 +1,3 @@
 {
-  imports = [ ./persistence.nix ./git.nix ./shell ];
+  imports = [ ./persistence.nix ./git.nix ./shell ./yazi.nix ];
 }
