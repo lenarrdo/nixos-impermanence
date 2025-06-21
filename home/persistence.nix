@@ -9,6 +9,7 @@
     allowOther = true;
 
     directories = [
+      ".ssh"
       "dotfiles"
     ];
   };
