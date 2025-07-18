@@ -1,7 +1,16 @@
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports = [ ./hardware-configuration.nix ../nixos/default.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../nixos/default.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -36,7 +45,10 @@
   };
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;

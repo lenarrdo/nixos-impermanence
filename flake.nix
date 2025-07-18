@@ -19,17 +19,18 @@
     };
   };
 
-  outputs = {nixpkgs, ...} @ inputs:
-  {
-    nixosConfigurations.orso = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        inputs.disko.nixosModules.default
-        inputs.home-manager.nixosModules.default
-        inputs.impermanence.nixosModules.impermanence
+  outputs =
+    { nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.orso = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          inputs.disko.nixosModules.default
+          inputs.home-manager.nixosModules.default
+          inputs.impermanence.nixosModules.impermanence
 
-        ./orso/configuration.nix
-      ];
+          ./orso/configuration.nix
+        ];
+      };
     };
-  };
 }

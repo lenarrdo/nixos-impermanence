@@ -6,32 +6,43 @@
     settings = {
       mgr = {
         sort_by = "natural";
-	scrolloff = 8;
+        scrolloff = 8;
       };
 
       opener = {
-        play = [{
-          run = ''mpv --no-terminal --force-window "$@"'';
-          orphan = true;
-          for = "unix";
-        }];
-        open = [{
-          run = ''xdg-open "$@"'';
-          orphan = true;
-          for = "unix";
-        }];
-        gimp = [{
-          run = ''gimp "$@"'';
-          orphan = true;
-          for = "unix";
-        }];
+        play = [
+          {
+            run = ''mpv --no-terminal --force-window "$@"'';
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        open = [
+          {
+            run = ''xdg-open "$@"'';
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        gimp = [
+          {
+            run = ''gimp "$@"'';
+            orphan = true;
+            for = "unix";
+          }
+        ];
       };
 
       open = {
-        prepend_rules = [{
-          mime = "image/*";
-          use = [ "open" "gimp" ];
-        }];
+        prepend_rules = [
+          {
+            mime = "image/*";
+            use = [
+              "open"
+              "gimp"
+            ];
+          }
+        ];
       };
 
       tasks = {
@@ -46,27 +57,42 @@
         desc = "Drag and drop selected files";
       }
       {
-        on = [ "g" "l" ];
+        on = [
+          "g"
+          "l"
+        ];
         run = "cd ~/.local";
         desc = "Go to the local directory";
       }
       {
-        on = [ "g" "f" ];
+        on = [
+          "g"
+          "f"
+        ];
         run = "cd ~/flake";
         desc = "Go to the flake directory";
       }
       {
-        on = [ "g" "d" ];
+        on = [
+          "g"
+          "d"
+        ];
         run = "cd ~/documents";
         desc = "Go to the documents directory";
       }
       {
-        on = [ "g" "D" ];
+        on = [
+          "g"
+          "D"
+        ];
         run = "cd ~/downloads";
         desc = "Go to the downloads directory";
       }
       {
-        on = [ "g" "." ];
+        on = [
+          "g"
+          "."
+        ];
         run = "cd ~/dotfiles";
         desc = "Go to the dotfiles directory";
       }

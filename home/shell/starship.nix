@@ -18,7 +18,9 @@
         "$python"
         "$character"
       ];
-      directory = { style = "blue"; };
+      directory = {
+        style = "blue";
+      };
       character = {
         success_symbol = "[❯](purple)";
         error_symbol = "[❯](red)";
@@ -29,8 +31,7 @@
         style = "bright-black";
       };
       git_status = {
-        format =
-          "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
         style = "cyan";
         conflicted = "";
         untracked = "";

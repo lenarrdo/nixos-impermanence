@@ -1,3 +1,6 @@
 {
-  imports = [ ./disko.nix ./persistence.nix ];
+  imports = [
+    ./disko.nix
+    ./persistence.nix
+  ];
 }
