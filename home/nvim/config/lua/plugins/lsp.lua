@@ -6,6 +6,11 @@ return {
     servers = {
       bashls = {},
       clangd = {},
+      nil_ls = {
+        cmd = { "nil" },
+        filetypes = { "nix" },
+        root_markers = { "flake.nix", ".git" },
+      },
       rust_analyzer = {},
       ts_ls = {},
       tinymist = {

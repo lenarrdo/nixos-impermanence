@@ -1,7 +1,8 @@
 {
   imports = [
-    ./persistence.nix
     ./git.nix
+    ./nvim
+    ./persistence.nix
     ./shell
     ./yazi.nix
   ];
